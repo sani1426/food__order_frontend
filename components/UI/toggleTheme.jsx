@@ -7,7 +7,7 @@ import Image from "next/image";
   return (
     <div
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className={`min-w-12.5 h-7.5 relative flex-between rounded-[50px] cursor-pointer px-1 transition-all ${
+      className={`min-w-12.5 h-7.5 relative flex justify-between items-center rounded-[50px] cursor-pointer px-1 transition-all ${
         theme === "light" ? "bg-sky-200" : "bg-blue-600"
       }`}
     >
