@@ -4,7 +4,7 @@ import { ThemeProvider } from "@teispace/next-themes";
 import { getTheme } from "@teispace/next-themes/server";
 
 const myFont = localFont({
-  src: "../public/font/tanha.ttf",
+  src: "../public/fonts/tanha.ttf",
 });
 
 export const metadata = {

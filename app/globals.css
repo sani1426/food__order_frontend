@@ -3,11 +3,19 @@
 html{
   scroll-behavior: smooth !important;
 }
-:root{
-    
+@theme {
+  --vulcanico: #ff4103;
+  --prime-clr: #b6ff00;
+  --second-clr: #2bee34;
+  --prime-2: #e6ff2a;
+  --darkin: #001621
+  
 }
 
-.dark { --bg: #001621; }
+.dark { 
+    --bg: #001621; 
+    --color:#fcfcfc;
+}
 
 
 
