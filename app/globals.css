@@ -1,6 +1,13 @@
 @import "tailwindcss";
 
+html{
+  scroll-behavior: smooth !important;
+}
+:root{
+    
+}
 
+.dark { --bg: #001621; }
 
 
 
