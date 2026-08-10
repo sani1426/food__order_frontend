@@ -53,7 +53,7 @@ const Navbar = () => {
       ))}
       <div style={{translate: `${translateX} 0` , visibility: "hidden"}} className={`drop ${activeItem && !isHidden ? "visibling" : ""}`}>
         {
-            activeItem.items.map((link , index) => (
+            activeItem?.items?.map((link , index) => (
                 <Link key={index} href={link.href} >{link.name}</Link>
             ))
         }
