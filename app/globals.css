@@ -1,18 +1,32 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: tanha;
+  src: url(../public/fonts/tanha.ttf)format(truetype);
+}
+
 html{
   scroll-behavior: smooth !important;
 }
 @theme {
   --color-vulcanico: #ff4103;
   /* --color-second: #FF8500; */
-  --color-second: #FF00AD;
+    /* --color-prime : rgb(255,88,0); */
   --color-prime: #FF0081;
+  --color-second: #FF00AD;
   --color-darkin: #001621;
-  /* --color-prime : rgb(255,88,0); */
-  --color-txt: #f7f7f7;
-  --color-mute: #bebebe;
-  
+  --color-txt-light-prime: hsl(224 71.4% 4.1%);
+  --color-txt-light-second:hsl(220.9 39.3% 11%);
+  --color-txt-dark-prime: hsl(0 0% 96%);
+  --color-txt-dark-second: hsl(220 14.3% 95.9%);
+  --color-txt-light-muted:#8E8E8E;
+  --color-txt-dark-muted:#c6beeb;
+  --color-backlight-prime: hsl(240, 67%, 94%); 
+  --color-backlight-second: hsl(0, 0%, 88%); 
+  --color-backdark-prime: hsl(237, 50%, 9%);
+  --color-backdark-second:hsl(240, 28%, 14%);
+  /* font */
+  --font-tanha: tanha
 }
 
 .dark { 
