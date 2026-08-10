@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { ThemeProvider } from "@teispace/next-themes";
 import { getTheme } from "@teispace/next-themes/server";
 import Header from "@/components/shared/header";
+import Navbar from "@/components/shared/navbar";
 
 const myFont = localFont({
   src: "../public/fonts/tanha.ttf",
@@ -26,8 +27,8 @@ export default async function RootLayout({ children }) {
           attribute="class"
           initialTheme={initialTheme ?? undefined}
         >
-          <Header />
-          <main className="max-w-4xl mx-auto ">{children}</main>
+         <Navbar />
+          <main className="max-w-4xl mx-auto p-4 ">{children}</main>
         </ThemeProvider>
       </body>
     </html>

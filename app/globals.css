@@ -15,12 +15,12 @@ html{
   --color-prime: #FF0081;
   --color-second: #FF00AD;
   --color-darkin: #001621;
-  --color-txt-light-prime: hsl(224 71.4% 4.1%);
-  --color-txt-light-second:hsl(220.9 39.3% 11%);
-  --color-txt-dark-prime: hsl(0 0% 96%);
-  --color-txt-dark-second: hsl(220 14.3% 95.9%);
-  --color-txt-light-muted:#8E8E8E;
-  --color-txt-dark-muted:#c6beeb;
+  --color-light-prime: hsl(224 71.4% 4.1%);
+  --color-light-second:hsl(220.9 39.3% 11%);
+  --color-dark-prime: hsl(0 0% 96%);
+  --color-dark-second: hsl(220 14.3% 95.9%);
+  --color-light-muted:#8E8E8E;
+  --color-dark-muted:#c6beeb;
   --color-backlight-prime: hsl(240, 67%, 94%); 
   --color-backlight-second: hsl(0, 0%, 88%); 
   --color-backdark-prime: hsl(237, 50%, 9%);
@@ -40,5 +40,50 @@ background-clip: text;
 color: transparent;
 }
 
+.menu{
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
+.drop{
+position: fixed;
+z-index : 1;
+top: 86px;
+left: 0;
+width: 120px;
+padding: 6px 0;
+display: grid;
+opacity: 0;
+visibility: hidden;
+border-radius: 12px;
+background-color: #f7f7f7;
+transition: 0.3s;
+}
+.dark.drop{
+  background-color: hsl(240, 28%, 14%);
+  color :#f7f7f7
+}
+
+.menu
+a:is(:hover, .active) {
+  color: #FF0081;
+}
+.drop.visibling{
+  opacity: 1;
+  visibility: visible;
+}
+.drop::after{
+  content: "";
+  position: absolute;
+  top: -12px;
+  width: 100%;
+  height: 50px;
+}
+.drop > a {
+  position: relative;
+  z-index: 1;
+  height: 40px;
+  font-size: 14px;
+}
 
