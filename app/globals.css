@@ -4,19 +4,27 @@ html{
   scroll-behavior: smooth !important;
 }
 @theme {
-  --vulcanico: #ff4103;
-  --prime-clr: #b6ff00;
-  --second-clr: #2bee34;
-  --prime-2: #e6ff2a;
-  --darkin: #001621
+  --color-vulcanico: #ff4103;
+  /* --color-second: #FF8500; */
+  --color-second: #FF00AD;
+  --color-prime: #FF0081;
+  --color-darkin: #001621;
+  /* --color-prime : rgb(255,88,0); */
+  --color-txt: #f7f7f7;
+  --color-mute: #bebebe;
   
 }
 
 .dark { 
-    --bg: #001621; 
-    --color:#fcfcfc;
+    --bg: #001427; 
+    --color:#f7f7f7;
 }
 
+.text-gradient{
+background: -webkit-linear-gradient(45deg, hsla(330, 100%, 50%, 1) 29%, hsla(319, 100%, 50%, 1) 100%);
+background-clip: text;
+color: transparent;
+}
 
 
 
