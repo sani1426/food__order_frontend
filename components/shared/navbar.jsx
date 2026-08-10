@@ -51,7 +51,7 @@ const Navbar = () => {
           href={item.href}
         />
       ))}
-      <div style={{translate: `${translateX} 0` , visibility: "hidden"}} className={`drop ${activeItem && !isHidden ? "visibling" : ""}`}>
+      <div style={{translate: `${translateX} 0` }} className={`drop ${activeItem && !isHidden ? "visibling" : ""}`}>
         {
             activeItem?.items?.map((link , index) => (
                 <Link key={index} href={link.href} >{link.name}</Link>
