@@ -45,7 +45,7 @@ const Navbar = () => {
     >
       {navItems.map((item) => (
         <MyLink
-          isActive={item.name === activeItem.name && !isHidden}
+          isActive={item?.name === activeItem?.name && !isHidden}
           item={item}
           onHover={handleLinkHover}
           href={item.href}
