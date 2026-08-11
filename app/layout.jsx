@@ -1,6 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { ThemeProvider } from "@/components/theme-provider";
+import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 import Header from "@/components/shared/header";
 
 const myFont = localFont({
