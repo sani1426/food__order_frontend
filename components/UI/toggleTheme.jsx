@@ -1,9 +1,9 @@
 "use client";
-import { useTheme } from "@teispace/next-themes";
+import { useTheme } from "next-themes";
 import Image from "next/image";
 
  function ThemeButton() {
-  const { theme, setTheme } = useTheme();
+  const {theme , setTheme } = useTheme();
   return (
     <div
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}

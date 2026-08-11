@@ -1,9 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
-import { ThemeProvider } from "@teispace/next-themes";
-import { getTheme } from "@teispace/next-themes/server";
+import { ThemeProvider } from "@/components/theme-provider";
 import Header from "@/components/shared/header";
-
 
 const myFont = localFont({
   src: "../public/fonts/tanha.ttf",
@@ -20,14 +18,17 @@ export default async function RootLayout({ children }) {
     <html
       dir="rtl"
       lang="fa"
+      suppressHydrationWarning
       className={`h-full antialiased ${myFont.className}`}
     >
       <body>
         <ThemeProvider
           attribute="class"
-          initialTheme={initialTheme ?? undefined}
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
         >
-<Header/>
+          <Header />
           <main className="max-w-4xl mx-auto p-4 ">{children}</main>
         </ThemeProvider>
       </body>

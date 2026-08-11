@@ -1,6 +1,7 @@
 import { navItems } from "@/common/data";
 import Link from "next/link";
 import ThemeButton from "../UI/toggleTheme";
+import {} from "react-icons"
 
 const Header = () => {
   return (
