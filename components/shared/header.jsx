@@ -1,9 +1,10 @@
 import { navItems } from "@/common/data";
 import Link from "next/link";
+import ThemeButton from "../UI/toggleTheme";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between">
+    <header className="flex items-center justify-between max-w-4xl ">
       <Link href="/" className="text-gradient font-semibold text-2xl">
         پیتزاویچ
       </Link>
@@ -24,6 +25,7 @@ const Header = () => {
           ثبت نام
         </Link>
       </nav>
+      <ThemeButton />
     </header>
   );
 };
