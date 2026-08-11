@@ -4,7 +4,7 @@ import ThemeButton from "../UI/toggleTheme";
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between w-6xl max-w-[90vw] mx-auto bg-backlight-second dark:bg-backdark-second p-5 rounded-[40px]">
+    <header className="flex mt-4 items-center justify-between w-6xl max-w-[90vw] mx-auto bg-backlight-second dark:bg-backdark-second p-5 rounded-[40px]">
       <Link href="/" className="text-gradient font-semibold text-3xl md:text-4xl">
         پیتزاویچ
       </Link>
