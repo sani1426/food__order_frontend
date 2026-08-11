@@ -2,42 +2,59 @@
 
 @font-face {
   font-family: tanha;
-  src: url(../public/fonts/tanha.ttf)format(truetype);
+  src: url(../public/fonts/tanha.ttf) format(truetype);
+}
+:root {
+  --background-prime: hsl(240, 67%, 94%);
+  --background-second: hsl(0, 0%, 88%);
+  --text-prime: hsl(224 71.4% 4.1%);
+  --text-second: hsl(220.9 39.3% 11%);
+}
+.dark {
+  --background-prime: hsl(237, 50%, 9%);
+  --background-second: hsl(240, 28%, 14%);
+  --text-prime: hsl(0 0% 96%);
+  --text-second: hsl(220 14.3% 95.9%);
 }
 
-html{
+html {
   scroll-behavior: smooth !important;
 }
 @theme {
   --color-vulcanico: #ff4103;
   /* --color-second: #FF8500; */
-    /* --color-prime : rgb(255,88,0); */
-  --color-prime: #FF0081;
-  --color-second: #FF00AD;
+  /* --color-prime : rgb(255,88,0); */
+  --color-prime: #ff0081;
+  --color-second: #ff00ad;
   --color-darkin: #001621;
   --color-light-prime: hsl(224 71.4% 4.1%);
-  --color-light-second:hsl(220.9 39.3% 11%);
+  --color-light-second: hsl(220.9 39.3% 11%);
   --color-dark-prime: hsl(0 0% 96%);
   --color-dark-second: hsl(220 14.3% 95.9%);
-  --color-light-muted:#8E8E8E;
-  --color-dark-muted:#c6beeb;
-  --color-backlight-prime: hsl(240, 67%, 94%); 
-  --color-backlight-second: hsl(0, 0%, 88%); 
+  --color-light-muted: #8e8e8e;
+  --color-dark-muted: #c6beeb;
+  --color-backlight-prime: hsl(240, 67%, 94%);
+  --color-backlight-second: hsl(0, 0%, 88%);
   --color-backdark-prime: hsl(237, 50%, 9%);
-  --color-backdark-second:hsl(240, 28%, 14%);
+  --color-backdark-second: hsl(240, 28%, 14%);
   /* font */
-  --font-tanha: tanha
+  --font-tanha: tanha;
+}
+.bg-prim{
+    background: var(--background-prime);
+  color: var(--text-prime)
+}
+.bg-sec {
+  background: var(--background-second);
+  color: var(--text-second)
 }
 
-.dark { 
-    --bg: #001427; 
-    --color:#f7f7f7;
+.text-gradient {
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(330, 100%, 50%, 1) 29%,
+    hsla(319, 100%, 50%, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
 }
-
-.text-gradient{
-background: -webkit-linear-gradient(45deg, hsla(330, 100%, 50%, 1) 29%, hsla(319, 100%, 50%, 1) 100%);
-background-clip: text;
-color: transparent;
-}
-
-
