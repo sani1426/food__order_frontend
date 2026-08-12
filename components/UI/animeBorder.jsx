@@ -61,7 +61,7 @@ export const GlowBorderCard = React.forwardRef(
                     className
                 )}
                 style={{
-                    aspectRatio: height ? 'unset' : aspectRatio,
+                    aspectRatio: aspectRatio,
                     borderRadius: borderRadius,
                     '--glow-animation-duration': `${animationDuration}s`,
                     ...colorVars,
