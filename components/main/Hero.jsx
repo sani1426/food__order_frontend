@@ -1,60 +1,34 @@
-import Image from "next/image"
+import Image from "next/image";
 import { IoArrowBackOutline } from "react-icons/io5";
-
 
 const Hero = () => {
   return (
-    // <section className="grid grid-cols-2 justify-between">
-    //   <div className="">
-    //     <h1 className="text-4xl font-semibold text-gradient gradient-anime">
-    //       همه ی مشکلات با یه پیتزا خوب حل میشن
-    //     </h1>
-    //     <p className="my-4 text-light-muted">
-    //       پیتزا تکه ی گمشده است که روزها رو کامل میکنه , یه راه حل ساده و خوشمزه
-    //     </p>
-    //     <div className="">
-    //       <button className="bg-prime text-white px-8 py-2 rounded-full flex justify-center items-center gap-1">
-    //         سفارش
-    //         <IoArrowBackOutline className="text-xl"/>
-    //       </button>
-    //       <button>مشاهده منو</button>
-    //     </div>
-    //   </div>
-    //   <div className=" relative">
-    //     <Image
-    //       src={"/images/hero.png"}
-    //       alt="hero-image/pizza"
-    //       layout={"fill"}
-    //       objectFit={"contain"}
-    //     />
-    //   </div>
-    // </section>
-    <section className="relative w-screen h-screen">
+    <section className="relative">
       <Image
         src={"/images/hero.png"}
-        alt="hero-image/pizza"
-        className=" w-full h-full "
+        alt="hero-image"
+        className="w-full h-110 md:h-150 lg:h-187.5 object-cover z-[-1]"
       />
-      <div className="absolute w-full h-full flex justify-center items-center z-10">
-        <h1 className="text-4xl font-semibold text-gradient gradient-anime">
-         همه ی مشکلات با یه پیتزا خوب حل میشن 
-        </h1>
-        <p className="my-4 text-light-muted">
-           پیتزا تکه ی گمشده است که روزها رو کامل میکنه , یه راه حل ساده و
-          خوشمزه
-        </p>
-        <div className="">
-          <button className="bg-prime text-white px-8 py-2 rounded-full flex justify-center items-center gap-1">
-             سفارش  <IoArrowBackOutline className="text-xl" />
-
-          </button>
-           <button>مشاهده منو</button>
-
+      <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
+        <div className="text-center text-white p-6 ">
+          <h1 className="text-gradient gradient-anime text-3xl md:text-4xl font-bold mb-4">
+            همه ی مشکلات با یه پیتزا خوب حل میشن{" "}
+          </h1>
+          <p className="text-sm md:text-lg text-light-muted mb-6">
+            پیتزا تکه ی گمشده است که روزها رو کامل میکنه , یه راه حل ساده و
+            خوشمزه
+          </p>
+          <Link
+            href="#"
+            className="bg-prime text-white rounded-full px-8 py-2 flex items-center justify-center gap-2"
+          >
+            <span>سفارش</span>
+            <IoArrowBackOutline />
+          </Link>
         </div>
-
       </div>
     </section>
   );
-}
+};
 
-export default Hero
+export default Hero;
