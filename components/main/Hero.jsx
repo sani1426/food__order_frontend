@@ -29,7 +29,7 @@ const Hero = () => {
     //     />
     //   </div>
     // </section>
-    <section className="relative">
+    <section className="relative w-screen h-screen">
       <Image
         src={"/images/hero.png"}
         alt="hero-image/pizza"
