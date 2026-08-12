@@ -29,13 +29,13 @@ const Hero = () => {
     //     />
     //   </div>
     // </section>
-    <section>
+    <section className="relative">
       <Image
         src={"/images/hero.png"}
         alt="hero-image/pizza"
-        className="relative w-full h-full "
+        className=" w-full h-full "
       />
-      <div className="absolute flex justify-center items-center z-10">
+      <div className="absolute w-full h-full flex justify-center items-center z-10">
         <h1 className="text-4xl font-semibold text-gradient gradient-anime">
          همه ی مشکلات با یه پیتزا خوب حل میشن 
         </h1>
