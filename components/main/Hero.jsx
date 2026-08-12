@@ -1,9 +1,10 @@
 import Image from "next/image"
+import { IoArrowBackOutline } from "react-icons/io5";
 
 
 const Hero = () => {
   return (
-    <section className="grid grid-cols-2 ">
+    <section className="grid grid-cols-2 justify-between">
       <div className="">
         <h1 className="text-4xl font-semibold text-gradient gradient-anime">
           همه ی مشکلات با یه پیتزا خوب حل میشن
@@ -14,6 +15,7 @@ const Hero = () => {
         <div className="">
           <button className="bg-prime text-white px-8 py-2 rounded-full">
             سفارش
+            <IoArrowBackOutline className="text-xl"/>
           </button>
           <button></button>
         </div>
