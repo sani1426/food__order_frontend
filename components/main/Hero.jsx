@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IoArrowBackOutline } from "react-icons/io5";
+import GlowBorderCard from "../UI/animeBorder";
 
 const Hero = () => {
   return (
@@ -12,9 +13,12 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
         <div className="text-center text-white p-6 ">
-          <h1 className="text-gradient gradient-anime text-3xl md:text-4xl font-bold mb-4">
+              <GlowBorderCard>
+
+          <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">
             همه ی مشکلات با یه پیتزا خوب حل میشن{" "}
           </h1>
+              </GlowBorderCard>
           <p className="text-sm md:text-lg text-light-muted mb-6">
             پیتزا تکه ی گمشده است که روزها رو کامل میکنه , یه راه حل ساده و
             خوشمزه
