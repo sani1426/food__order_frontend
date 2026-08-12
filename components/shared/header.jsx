@@ -1,12 +1,12 @@
 import { navItems } from "@/common/data";
 import Link from "next/link";
 import ThemeButton from "../UI/toggleTheme";
-import {} from "react-icons"
+import { FaUserCircle } from "react-icons/fa";
 
 const Header = () => {
   return (
-    <header className="fixed w-full flex justify-center items-center">
-      <div className=" flex mt-4 items-center justify-between w-6xl max-w-[90vw] mx-auto bg-sec p-5 rounded-[40px] z-100">
+    <header className="fixed w-full flex justify-center items-center z-100">
+      <div className=" flex mt-4 items-center justify-between w-7xl max-w-[90vw] mx-auto bg-sec p-7 rounded-[40px] shadow-lg">
         <Link
           href="/"
           className="text-gradient font-semibold text-3xl md:text-4xl"
@@ -26,10 +26,16 @@ const Header = () => {
         </nav>
         <div className="flex items-center justify-center gap-5">
           <Link
-            className="bg-prime text-white rounded-full px-8 py-2"
+            className="bg-prime text-white rounded-full px-8 py-2 hidden md:block"
             href="sign-up"
           >
             ثبت نام
+          </Link>
+          <Link
+            className="bg-prime text-white rounded-full px-8 py-2 md:hidden"
+            href="sign-up"
+          >
+         <FaUserCircle className="text-2xl" />
           </Link>
           <ThemeButton />
         </div>
