@@ -13,9 +13,9 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
         <div className="text-center text-white p-6 ">
-              <GlowBorderCard>
+              <GlowBorderCard width={"700px"} height={"150px"} >
 
-          <h1 className="text-white text-4xl md:text-6xl font-bold mb-4">
+          <h1 className="text-white text-3xl md:text-5xl font-bold mb-4">
             همه ی مشکلات با یه پیتزا خوب حل میشن{" "}
           </h1>
               </GlowBorderCard>

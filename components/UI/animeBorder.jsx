@@ -3,9 +3,7 @@
 import React from 'react';
 import { cn } from '@/lib/utils';
 
-/**
- * Props for the GlowBorderCard component
- */
+
 
 // Preset gradient colors (10 colors each for smooth transitions)
 const colorPresets = {
