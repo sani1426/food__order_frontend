@@ -58,3 +58,36 @@ html {
   background-clip: text;
   color: transparent;
 }
+
+@keyframes gradiChange {
+  0% {
+     background: -webkit-linear-gradient(
+    15deg,
+    hsla(330, 100%, 50%, 1) 29%,
+    hsla(319, 100%, 50%, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  }
+  50%{
+     background: -webkit-linear-gradient(
+    45deg,
+    hsla(330, 100%, 50%, 1) 29%,
+    hsla(319, 100%, 50%, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  }
+  100%{
+     background: -webkit-linear-gradient(
+    90deg,
+    hsla(330, 100%, 50%, 1) 29%,
+    hsla(319, 100%, 50%, 1) 100%
+  );
+  background-clip: text;
+  color: transparent;
+  }
+}
+.gradient-anime{
+  animation: gradiChange 3s ease-in iinfinite alternate slide-in;
+}
