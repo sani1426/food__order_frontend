@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { IoArrowBackOutline } from "react-icons/io5";
 
 const Hero = () => {
