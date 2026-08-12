@@ -4,7 +4,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "@/lib/gsap";
 
-export default function animationHero() {
+export default function AnimationHero() {
   const container = useRef(null);
 
   useGSAP(
