@@ -26,8 +26,6 @@ export const GlowBorderCard = React.forwardRef(
         {
             children,
             className,
-            width = '320px',
-            height,
             aspectRatio = '1',
             borderRadius = '0.75rem',
             animationDuration = 4,
@@ -63,8 +61,6 @@ export const GlowBorderCard = React.forwardRef(
                     className
                 )}
                 style={{
-                    width: width,
-                    height: height || 'auto',
                     aspectRatio: height ? 'unset' : aspectRatio,
                     borderRadius: borderRadius,
                     '--glow-animation-duration': `${animationDuration}s`,
