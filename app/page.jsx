@@ -1,12 +1,19 @@
 
-import Hero from "@/components/main/Hero";
+import animationHero from "@/components/animation/animationHero";
+import Products from "@/components/animation/products";
 
 
 
 export default function Home() {
   return (
     <>
-      <Hero />
+      <main>
+        <animationHero />
+
+        <Products />
+
+
+      </main>
     </>
   );
 }

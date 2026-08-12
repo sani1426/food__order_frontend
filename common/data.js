@@ -19,3 +19,4 @@ export const navItems = [
         name : "تماس با ما" , href: "/contact" , 
     },
 ]
+// npm install gsap @gsap/react
