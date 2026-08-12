@@ -1,4 +1,6 @@
 import Link from "next/link";
+import Title from "../animation/animationTitle";
+import Image from "next/image";
 
 
 
@@ -12,9 +14,9 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
         <div className="text-center text-white p-6 ">
-          <h1 className="text-3xl md:text-6xl font-bold  mb-4 text-gradient gradient-anime">
-            یه انتخاب خوشمزه و لذیذ
-          </h1>
+<Title title={" یه انتخاب خوشمزه و لذیذ"} />
+           
+
           <p className="text-sm md:text-lg mb-6 ">
             تکه ای از روز که بهترین طعم هارو داره
           </p>
