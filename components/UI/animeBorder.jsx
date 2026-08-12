@@ -56,7 +56,7 @@ export const GlowBorderCard = React.forwardRef(
                     // Base Container Layout
                     "relative overflow-hidden grid place-content-center isolate",
                     // Glass Effect Background
-                    "bg-zinc-50/50 dark:bg-neutral-900/60 backdrop-blur-md",
+                    "bg-zinc-50/80 dark:bg-neutral-900/30 backdrop-blur-sm",
                     // Custom className support
                     className
                 )}
