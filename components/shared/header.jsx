@@ -5,7 +5,7 @@ import {} from "react-icons"
 
 const Header = () => {
   return (
-    <header className="flex mt-4 items-center justify-between w-6xl max-w-[90vw] mx-auto bg-sec p-5 rounded-[40px]">
+    <header className=" fixed flex mt-4 items-center justify-between w-6xl max-w-[90vw] mx-auto bg-sec p-5 rounded-[40px]">
       <Link href="/" className="text-gradient font-semibold text-3xl md:text-4xl">
         پیتزاویچ
       </Link>

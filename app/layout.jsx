@@ -19,7 +19,7 @@ export default  function RootLayout({ children }) {
       dir="rtl"
       lang="fa"
       suppressHydrationWarning
-      className={`h-full antialiased ${myFont.className}`}
+      className={`w-full h-full antialiased ${myFont.className}`}
     >
       <body>
         <ThemeProvider
