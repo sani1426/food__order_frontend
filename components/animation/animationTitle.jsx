@@ -13,7 +13,7 @@ const Title = ({title}) => {
         duration: 0.3,
       });
   return (
-    <h1 class="text text-3xl md:text-6xl font-bold  mb-4 text-gradient gradient-anime ">
+    <h1 className="text">
       {title}
     </h1>
   );
