@@ -19,7 +19,7 @@ const Title = ({title}) => {
     })
   
   return (
-    <h1 className="text">
+    <h1 className="text text-3xl md:text-6xl text-gradient gradient-anime font-semibold">
       {title}
     </h1>
   );
