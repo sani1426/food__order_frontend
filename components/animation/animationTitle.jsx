@@ -1,5 +1,7 @@
 "use client"
-import {gsap} from "@/lib/gsap.js"
+
+import gsap from "gsap";
+
 const Title = ({title}) => {
     const tl = gsap.timeline();
     tl.set(".text", { opacity: 0 })
