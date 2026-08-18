@@ -17,7 +17,7 @@ const Hero = () => {
 <Title title={" یه انتخاب خوشمزه و لذیذ"} />
            
 
-          <p className="text-sm md:text-lg mb-6 ">
+          <p className="text-md md:text-xl m-12 ">
             تکه ای از روز که بهترین طعم هارو داره
           </p>
           <Link
