@@ -13,7 +13,7 @@ const Hero = () => {
         className="w-full h-110 md:h-150 lg:h-187.5 object-cover z-[-1]"
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
-        <div className="text-center text-white p-6 ">
+        <div className="flex justify-start items-start text-white p-6 ">
 <Title title={" یه انتخاب خوشمزه و لذیذ"} />
            
 
