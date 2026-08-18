@@ -19,7 +19,7 @@ const Title = ({title , fsSm , fsLg}) => {
     })
   
   return (
-    <h1 className={`text text-[${fsSm}] md:text-[${fsLg}] text-gradient gradient-anime font-semibold`}>
+    <h1 className={`text text-${fsSm} md:text-${fsLg} text-gradient gradient-anime font-semibold`}>
       {title}
     </h1>
   );
