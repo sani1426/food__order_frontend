@@ -6,11 +6,11 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative">
+    <section className="relative w-screen h-[60vh] md:h-[80vh] lg:h-screen">
       <Image
         src={"/images/hero-1.png"}
         alt="hero-image"
-        className="w-full h-110 md:h-150 lg:h-187.5 object-cover z-[-1]"
+        className="w-full h-full object-cover z-[-1]"
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
         <div className="flex justify-start items-start text-white p-6 ">
