@@ -14,12 +14,10 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
         <div className="flex-col w-full text-white p-6 ">
-<Title title={" یه انتخاب خوشمزه و لذیذ"} />
-           
+          <Title title={" یه انتخاب خوشمزه و لذیذ"} fsSm={"3xl"} fsLg={"7xl"} />
 
-          <p className="text-md md:text-xl m-12 ">
-            تکه ای از روز که بهترین طعم هارو داره
-          </p>
+          <Title title={"تکه ای از روز که بهترین طعم هارو داره"} fsSm={"lg"} fsLg={"xl"} />
+
           <Link
             href="#"
             className=" px-6 py-2 rounded-md text-lg bg-transparent border border-prime text-prime hover:bg-prime hover:text-white transition-all duration-200 "

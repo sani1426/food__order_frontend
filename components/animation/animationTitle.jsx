@@ -3,7 +3,7 @@
 import {gsap} from "@/lib/gsap";
 import { useGSAP } from "@gsap/react";
 
-const Title = ({title}) => {
+const Title = ({title , fsSm , fsLg}) => {
     useGSAP(() => {
   const tl = gsap.timeline();
   tl.set(".text", { opacity: 0 })
@@ -19,7 +19,7 @@ const Title = ({title}) => {
     })
   
   return (
-    <h1 className="text text-3xl md:text-7xl text-gradient gradient-anime font-semibold">
+    <h1 className={`text text-[${fsSm}] md:text-[${fsLg}] text-gradient gradient-anime font-semibold`}>
       {title}
     </h1>
   );
