@@ -1,4 +1,5 @@
-import Hero from "@/components/main/hero";
+import HeroOne from "@/components/main/head";
+
 
 
 
@@ -6,7 +7,7 @@ import Hero from "@/components/main/hero";
 export default function Home() {
   return (
     <>
-      <Hero />
+      <HeroOne />
     </>
   );
 }
