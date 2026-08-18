@@ -8,7 +8,7 @@ const Hero = () => {
   return (
     <section className="relative">
       <Image
-        src={"/images/hero.png"}
+        src={"/images/hero-1.png"}
         alt="hero-image"
         className="w-full h-110 md:h-150 lg:h-187.5 object-cover z-[-1]"
       />
