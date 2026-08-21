@@ -14,17 +14,12 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
         <div className="flex-col w-full text-white p-6 gap-y-4 ">
-          <Title 
-          title={" یه انتخاب خوشمزه و لذیذ"} 
-          fsSm={"3xl"} 
-          fsLg={"7xl"} 
-          />
-
-          <Title
-            title={"تکه ای از روز که بهترین طعم هارو داره"}
-            fsSm={"lg"}
-            fsLg={"xl"}
-          />
+          <h1 className="text-3xl md:text-7xl  text-gradient gradient-anime font-semibold">
+            یه انتخاب خوشمزه و لذیذ"
+          </h1>
+          <h2 className="text-lg md:text-2xl text-gradient gradient-anime font-semibold">
+            تکه ای از روز که بهترین طعم هارو داره
+          </h2>
 
           <Link
             href="#"
