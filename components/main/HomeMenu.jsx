@@ -13,7 +13,7 @@ const HomeMenu = () => {
       </div>
       <div className="grid grid-cols-3 gap-4">
         <div className="bg-gray-300 p-4 rounded-md">
-          <img src="/images/pepperoni.jpg" alt="pepperoni pizza" />
+          <img src="/images/pizza/pepperoni.jpg" alt="pepperoni pizza" />
           <h4 className="">پیتزا پپرونی</h4>
           <p className="">
             لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و استفاده
