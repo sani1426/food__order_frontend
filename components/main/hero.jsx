@@ -13,11 +13,11 @@ const Hero = () => {
         className="w-full h-full object-cover z-[-1]"
       />
       <div className="absolute inset-0 bg-linear-to-r from-[rgba(0,0,0,0.3)] to-[rgba(0,0,0,0.2)] z-10 flex items-center justify-center ">
-        <div className="flex-col w-full text-white p-2 lg:p-6  ">
+        <div className="flex-col w-full text-white p-2 md:p-4 lg:p-6  ">
           <h1 className="text-3xl lg:text-7xl  text-gradient gradient-anime font-semibold mb-4 md:mb-8 text-center md:text-right">
             یه انتخاب خوشمزه و لذیذ"
           </h1>
-          <h2 className=" text-xl lg:text-3xl text-gradient gradient-anime font-semibold mb-12">
+          <h2 className=" text-xl lg:text-3xl text-gradient gradient-anime font-semibold mb-12 text-center md:text-right">
             تکه ای از روز که بهترین طعم هارو داره
           </h2>
           <div className="flex  items-center gap-3 md:gap-6">
