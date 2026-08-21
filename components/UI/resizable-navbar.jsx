@@ -34,8 +34,8 @@ export const Navbar = ({
   return (
     <motion.div
       ref={ref}
-      // IMPORTANT: Change this to class of `fixed` if you want the navbar to be fixed
-      className={cn("sticky inset-x-0 top-20 z-40 w-full", className)}>
+
+      className={cn("fixed inset-x-0 top-20 z-40 w-full", className)}>
       {React.Children.map(children, (child) =>
         React.isValidElement(child)
           ? React.cloneElement(child, { visible })
@@ -68,7 +68,7 @@ export const NavBody = ({
         minWidth: "800px",
       }}
       className={cn(
-        "relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
+        "relative z-60 mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
         visible && "bg-white/80 dark:bg-neutral-950/80",
         className
       )}>
@@ -88,7 +88,7 @@ export const NavItems = ({
     <motion.div
       onMouseLeave={() => setHovered(null)}
       className={cn(
-        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-zinc-800 lg:flex lg:space-x-2",
+        "absolute inset-0 hidden flex-1 flex-row items-center justify-center space-x-2 text-sm font-medium text-zinc-600 transition duration-200 hover:text-prime lg:flex lg:space-x-2",
         className
       )}>
       {items.map((item, idx) => (
@@ -203,7 +203,7 @@ export const NavbarLogo = () => {
         alt="logo"
         width={30}
         height={30} />
-      <span className="font-medium text-black dark:text-white">Startup</span>
+      <span className="font-medium text-prime ">پیتزاویچ</span>
     </a>
   );
 };
