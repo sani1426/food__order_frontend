@@ -3,8 +3,8 @@ import React from 'react'
 
 const HomeMenu = () => {
   return (
-    <section className="py-5 md:max-w-7xl">
-      <div className="text-center">
+    <section className="py-8 ">
+      <div className="text-center md:-7xl max-w-[90vw]">
         {/* <div className="h-48 relative">
             <Image src={""} alt='salad' layout='fill' objectFit='contain' />
         </div> */}
