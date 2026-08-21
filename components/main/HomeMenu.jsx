@@ -3,7 +3,7 @@ import React from 'react'
 
 const HomeMenu = () => {
   return (
-    <section className="">
+    <section className="py-5 md:max-w-7xl">
       <div className="text-center">
         {/* <div className="h-48 relative">
             <Image src={""} alt='salad' layout='fill' objectFit='contain' />
@@ -11,7 +11,7 @@ const HomeMenu = () => {
         <h3 className="text-gray-600 font-semibold">مشاهده کنید</h3>
         <h2 className="text-prime font-bold text-4xl ">منو</h2>
       </div>
-      <div className="grid grid-cols-3 gap-4">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="bg-gray-300 p-4 rounded-md">
           <img src="/images/pizza/pepperoni.jpg" alt="pepperoni pizza" />
           <h4 className="">پیتزا پپرونی</h4>
