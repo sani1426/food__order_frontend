@@ -4,7 +4,7 @@ import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 import Header from "@/components/shared/header";
 import { Noto_Sans, Playfair_Display } from "next/font/google";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/shared/Navbar";
+import NavigationMenu from "@/components/shared/Navbar";
 
 const playfairDisplayHeading = Playfair_Display({subsets:['latin'],variable:'--font-heading'});
 
@@ -26,7 +26,15 @@ export default  function RootLayout({ children }) {
       dir="rtl"
       lang="fa"
       suppressHydrationWarning
-      className={cn("w-full", "h-full", "antialiased", myFont.className, "font-sans", notoSans.variable, playfairDisplayHeading.variable)}
+      className={cn(
+        "w-full",
+        "h-full",
+        "antialiased",
+        myFont.className,
+        "font-sans",
+        notoSans.variable,
+        playfairDisplayHeading.variable
+      )}
     >
       <body>
         <ThemeProvider
@@ -36,7 +44,7 @@ export default  function RootLayout({ children }) {
           disableTransitionOnChange
         >
           {/* <Header /> */}
-          <Navbar />
+          <NavigationMenu />
           <main className="">{children}</main>
         </ThemeProvider>
       </body>

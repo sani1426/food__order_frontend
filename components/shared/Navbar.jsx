@@ -12,7 +12,7 @@ import {
 } from "@/components/UI/resizable-navbar";
 import { useState } from "react";
 
-export default function Navbar() {
+export default function NavigationMenu() {
   const navItems = [
     {
       name: "صفحه اصلی",
