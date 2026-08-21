@@ -23,15 +23,15 @@ const Hero = () => {
           <div className="flex  items-center gap-3 md:gap-6">
             <Link
               href="#"
-              className="py-2 px-4 md:px-6 md:py-2 rounded-md text-sm  md:text-lg bg-transparent border border-prime text-prime hover:bg-prime hover:text-white transition-all duration-200 "
-            >
-              سفارش آنلاین
-            </Link>
-            <Link
-              href="#"
               className=" py-2 px-4 md:px-6 md:py-2 rounded-md text-sm  md:text-lg bg-prime border border-prime text-white hover:bg-transparent hover:text-prime transition-all duration-200 "
             >
               مشاهده منو
+            </Link>
+            <Link
+              href="#"
+              className="py-2 px-4 md:px-6 md:py-2 rounded-md text-sm  md:text-lg bg-transparent border border-prime text-prime hover:bg-prime hover:text-white transition-all duration-200 "
+            >
+              سفارش آنلاین
             </Link>
           </div>
         </div>
