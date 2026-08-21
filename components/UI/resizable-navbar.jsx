@@ -1,7 +1,7 @@
 "use client";;
 import { cn } from "@/lib/utils";
-import { HiDotsHorizontal } from "react-icons/hi";
-import { FaXTwitter } from "react-icons/fa6";
+import { IconMenu2, IconX } from "@tabler/icons-react";
+
 import {
   motion,
   AnimatePresence,
@@ -184,14 +184,13 @@ export const MobileNavToggle = ({
   onClick
 }) => {
   return isOpen ? (
-    <FaXTwitter className="text-black dark:text-white" onClick={onClick} />
+    <IconX className="text-black dark:text-white" onClick={onClick} />
   ) : (
-    <HiDotsHorizontal
-      className="text-black dark:text-white"
-      onClick={onClick}
-    />
+    <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
   );
 };
+
+
 
 
 export const NavbarLogo = () => {
