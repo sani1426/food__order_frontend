@@ -8,8 +8,8 @@ const HomeMenu = () => {
         {/* <div className="h-48 relative">
             <Image src={""} alt='salad' layout='fill' objectFit='contain' />
         </div> */}
-        <h3 className="text-gray-600 font-semibold">مشاهده کنید</h3>
-        <h2 className="text-prime font-bold text-4xl ">منو</h2>
+        <h3 className="text-gray-600 font-semibold text-2xl">مشاهده کنید</h3>
+        <h2 className="text-prime font-bold text-5xl ">منو</h2>
       </div>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div className="bg-gray-300 p-4 rounded-md">
