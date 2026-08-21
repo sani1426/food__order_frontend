@@ -6,7 +6,7 @@ import { FaUserCircle } from "react-icons/fa";
 const Header = () => {
   return (
     <header className="fixed w-full flex justify-center items-center z-100">
-      <div className=" flex mt-4 items-center justify-between w-7xl max-w-[90vw] mx-auto bg-sec p-6 rounded-[40px] shadow-lg">
+      <div className=" flex md:mt-4 items-center justify-between w-full  md:w-7xl md:max-w-[90vw] mx-auto bg-sec p-3 md:p-6 md:rounded-[50px] shadow-lg">
         <Link
           href="/"
           className="text-gradient font-semibold text-3xl md:text-4xl"
@@ -35,7 +35,7 @@ const Header = () => {
             className="bg-prime text-white rounded-full p-3 md:hidden"
             href="sign-up"
           >
-         <FaUserCircle className="text-2xl" />
+         <FaUserCircle className="text-xl" />
           </Link>
           <ThemeButton />
         </div>
