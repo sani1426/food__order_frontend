@@ -2,6 +2,13 @@ import "./globals.css";
 import localFont from "next/font/local";
 import { ThemeProvider } from "@/components/theme-provider/theme-provider";
 import Header from "@/components/shared/header";
+import { Noto_Sans, Playfair_Display } from "next/font/google";
+import { cn } from "@/lib/utils";
+import Navbar from "@/components/shared/Navbar";
+
+const playfairDisplayHeading = Playfair_Display({subsets:['latin'],variable:'--font-heading'});
+
+const notoSans = Noto_Sans({subsets:['latin'],variable:'--font-sans'});
 
 const myFont = localFont({
   src: "../public/fonts/tanha.ttf",
@@ -19,7 +26,7 @@ export default  function RootLayout({ children }) {
       dir="rtl"
       lang="fa"
       suppressHydrationWarning
-      className={`w-full h-full antialiased ${myFont.className}`}
+      className={cn("w-full", "h-full", "antialiased", myFont.className, "font-sans", notoSans.variable, playfairDisplayHeading.variable)}
     >
       <body>
         <ThemeProvider
@@ -28,7 +35,8 @@ export default  function RootLayout({ children }) {
           enableSystem
           disableTransitionOnChange
         >
-          <Header />
+          {/* <Header /> */}
+          <Navbar />
           <main className="">{children}</main>
         </ThemeProvider>
       </body>

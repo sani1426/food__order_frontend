@@ -1,87 +1,55 @@
-"use client";
+import { Button as ButtonPrimitive } from "@base-ui/react/button"
+import { cva } from "class-variance-authority";
 
-import React from "react";
-import { motion, MotionProps } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils"
 
+const buttonVariants = cva(
+  "group/button inline-flex shrink-0 items-center justify-center rounded-none border border-transparent bg-clip-padding text-xs font-semibold tracking-widest whitespace-nowrap uppercase transition-all outline-none select-none focus-visible:border-ring focus-visible:ring-2 focus-visible:ring-ring/30 active:not-aria-[haspopup]:translate-y-px disabled:pointer-events-none disabled:opacity-50 aria-invalid:border-destructive aria-invalid:ring-2 aria-invalid:ring-destructive/20 dark:aria-invalid:border-destructive/50 dark:aria-invalid:ring-destructive/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-3.5",
+  {
+    variants: {
+      variant: {
+        default: "bg-primary text-primary-foreground hover:bg-primary/80",
+        outline:
+          "border-border bg-transparent hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-input/30",
+        secondary:
+          "bg-secondary text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)] aria-expanded:bg-secondary aria-expanded:text-secondary-foreground",
+        ghost:
+          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+        destructive:
+          "bg-destructive/10 text-destructive hover:bg-destructive/20 focus-visible:border-destructive/40 focus-visible:ring-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30 dark:focus-visible:ring-destructive/40",
+        link: "text-primary underline underline-offset-4 hover:underline",
+      },
+      size: {
+        default:
+          "h-10 gap-1.5 px-6 has-data-[icon=inline-end]:pr-4 has-data-[icon=inline-start]:pl-4",
+        xs: "h-7 gap-1 px-3 has-data-[icon=inline-end]:pr-2 has-data-[icon=inline-start]:pl-2 [&_svg:not([class*='size-'])]:size-3",
+        sm: "h-9 gap-1 px-4 has-data-[icon=inline-end]:pr-3 has-data-[icon=inline-start]:pl-3",
+        lg: "h-11 gap-1.5 px-8 has-data-[icon=inline-end]:pr-5 has-data-[icon=inline-start]:pl-5",
+        icon: "size-10",
+        "icon-xs": "size-7 [&_svg:not([class*='size-'])]:size-3",
+        "icon-sm": "size-9",
+        "icon-lg": "size-11",
+      },
+    },
+    defaultVariants: {
+      variant: "default",
+      size: "default",
+    },
+  }
+)
 
-/**
- * AnimatedButton
- * - theme-aware: uses Tailwind `dark:` classes so it works in both light and dark mode
- * - accepts all native button props (onClick, className, type, etc.)
- */
-const AnimatedButton = ({
-  children = "Browse Components",
-  className = "",
-  as = "button",
-  ...rest
-}) => {
-  const Component = (motion)[as] || motion.button;
-
+function Button({
+  className,
+  variant = "default",
+  size = "default",
+  ...props
+}) {
   return (
-    <Component
-      {...rest}
-      whileHover={{ scale: 1.01 }}
-      whileTap={{ scale: 0.97 }}
-      transition={{
-        type: "spring",
-        stiffness: 500,
-        damping: 30,
-        mass: 0.5,
-      }}
-      // Set a CSS variable `--shine` that we override for dark mode via Tailwind.
-      className={cn(
-        "group inline-flex items-center justify-center px-6 py-2 rounded-md relative overflow-hidden bg-neutral-50 dark:bg-black border border-neutral-200 dark:border-[#222]",
-        "text-neutral-900 dark:text-neutral-100 font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-neutral-950 disabled:pointer-events-none disabled:opacity-50",
-        "[--shine:rgba(0,0,0,.66)] dark:[--shine:rgba(255,255,255,.66)]",
-        className,
-      )}
-    >
-      {/* Text with shine mask */}
-      <motion.span
-        className="tracking-wide font-light flex items-center justify-center h-full w-full relative z-10"
-        style={{
-          WebkitMaskImage:
-            "linear-gradient(-75deg, white calc(var(--mask-x) + 20%), transparent calc(var(--mask-x) + 30%), white calc(var(--mask-x) + 100%))",
-          maskImage:
-            "linear-gradient(-75deg, white calc(var(--mask-x) + 20%), transparent calc(var(--mask-x) + 30%), white calc(var(--mask-x) + 100%))",
-        }}
-        initial={{ ["--mask-x"]: "100%" }}
-        animate={{ ["--mask-x" ]: "-100%" } }
-        transition={{
-          repeat: Infinity,
-          duration: 1,
-          ease: "linear",
-          repeatDelay: 1,
-        }}
-      >
-        {children}
-      </motion.span>
-
-      {/* Border shine effect uses the --shine variable so it adapts to theme */}
-      <motion.span
-        className="block absolute inset-0 rounded-md p-px"
-        style={{
-          background:
-            "linear-gradient(-75deg, transparent 30%, var(--shine) 50%, transparent 70%)",
-          backgroundSize: "200% 100%",
-          mask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-          maskComposite: "exclude",
-          WebkitMask:
-            "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
-          WebkitMaskComposite: "xor",
-        }}
-        initial={{ backgroundPosition: "100% 0", opacity: 0 }}
-        animate={{ backgroundPosition: ["100% 0", "0% 0"], opacity: [0, 1, 0] }}
-        transition={{
-          duration: 1,
-          repeat: Infinity,
-          ease: "linear",
-          repeatDelay: 1,
-        }}
-      />
-    </Component>
+    <ButtonPrimitive
+      data-slot="button"
+      className={cn(buttonVariants({ variant, size, className }))}
+      {...props} />
   );
-};
+}
 
-export default AnimatedButton;
+export { Button, buttonVariants }
